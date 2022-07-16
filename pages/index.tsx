@@ -1,7 +1,8 @@
 import type { NextPage } from 'next'
 import { TwitterCard } from '../components/TwitterCard'
 
-function Home() {
+const Home: NextPage = () => {
+  
   return (
     <div>
       <p className='text-red-500'>Typescript</p>
