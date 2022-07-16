@@ -2,7 +2,13 @@ import type { NextPage } from 'next'
 
 // Arrayの書き方
 const foo : (number | string )[] = [1,"2","3",1,3]
-const bar : [string, number, boolean] = ["1",2,false,false]
+const bar : [string, number, boolean] = ["1",2,false]
+
+type baz = () => void 
+
+const testFunc: baz = () => {
+  alert('テスト')
+}
 
 function Home() {
   return (
