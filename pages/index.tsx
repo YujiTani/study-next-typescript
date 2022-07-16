@@ -1,25 +1,25 @@
 import type { NextPage } from 'next'
 
-const Home: NextPage = () => {
-  const foo : number = 123
-  let baz = {} as { bar: number }; // 型アサーション
-  // let baz = <{ bar: number }>{}; // jsxファイルなどでは、こんな風に記述する
+// Arrayの書き方
+const foo : (number | string )[] = [1,"2","3",1,3]
+const bar : [string, number, boolean] = ["1",2,false,false]
 
-  baz.bar = 1;
+function Home() {
+  return (
+    <div>
+      <Component />
+    </div>
+  )
+}
 
-  const double = (x: number ): number | undefined => {
-    if (x > 0) {
-      return
-    }
-
-    return x * 2
+const Component = (props: {foo?: true}) => {
+  if (props.foo) {
+    return (
+      <div>s</div>
+    )
   }
 
-  double(foo)
-
-  return (
-      <div>Test</div>
-  )
+  return <div>Test</div>
 }
 
 export default Home
