@@ -44,17 +44,6 @@ export const user4: pickUser = {
     name: "優志",
 } 
 
-// Required 全てを必須プロパティに変換する
-type requiredUser = Required<User>
-
-export const user3: requiredUser = {
-    // 全てのプロパティが必須になっている
-
-    // name: "優志",
-    age: null,
-    countory: "US"
-} 
-
 // Omit 指定されたプロパティ以外を除外する
 type omitUser = Omit<User, "name">
 
